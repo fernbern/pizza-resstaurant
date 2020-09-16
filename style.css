@@ -61,6 +61,9 @@ body {
     display: none;
 }
 
+.text-center {
+    text-align: center;
+}
 /* Header */
 .site-header {
     border-bottom: 1px solid #c1c1c1;
@@ -261,4 +264,99 @@ nav.site-nav ul li.current_page_item {
     .hero-text {
         width: 60%;
     }
+}
+
+.main-content {
+    padding: 60px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-content {
+        margin-top: -90px;
+    }
+}
+
+.content-text p {
+    font-size: 18px;
+    line-height: 50px;
+}
+
+/* ABOUT US BOXES */
+.box-information {
+    display: grid;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px ) {
+    .box-information {
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+    }
+}
+
+.single-box {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+}
+
+@media screen and (min-width: 768px )  {
+    .single-box {
+        display: grid;
+        grid-template-columns: unset;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+.single-box:nth-child(1) {
+    background-color: #f19f30;
+}
+.single-box:nth-child(2) {
+    background-color: #127427;
+}
+.single-box:nth-child(3) {
+    background-color: #a61206;
+}
+
+@media screen and (min-width: 768px) {
+    .single-box:nth-child(2) img {
+        order: 2;
+    }
+    .single-box:nth-child(2) div {
+        order: 1;
+    }
+}
+
+.content-box {
+    display: grid;
+    grid-template-rows: 10% 20% 60% 10%;
+    grid-template-areas: "."
+                         "top"
+                         "text"
+                         ".";
+}
+
+.content-box * {
+    align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+    .content-box {
+        grid-template-rows: 20% 30% 30% 20%;
+    }
+}
+
+.content-box h3 {
+    grid-area: top;
+    margin: 5px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+
+.content-box p {
+    grid-area: text;
+    text-align: center;
 }
